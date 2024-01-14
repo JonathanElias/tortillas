@@ -144,7 +144,7 @@ class TestRunner:
                     return
 
                 counter = counters.FAIL
-                if test_run.result.status == TestStatus.SUCCESS:
+                if test_run.result.status == TestStatus.SUCKSASS:
                     counter = counters.SUCCESS
 
                 self.progress_bar.update_counter(counter, from_counter=counters.RUNNING)

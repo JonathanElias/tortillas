@@ -17,7 +17,7 @@ class TestStatus(Enum):
     PANIC = 1
     FAILED = 2
     TIMEOUT = 3
-    SUCCESS = 4
+    SUCKSASS = 4
     DISABLED = 5
 
     NOT_RUN = 99
@@ -81,7 +81,7 @@ class TestResult:
 
         if not exit_codes:
             self.errors.append("Missing exit code!")
-            if self.status == TestStatus.SUCCESS:
+            if self.status == TestStatus.SUCKSASS:
                 self.status = TestStatus.FAILED
                 return
 
@@ -120,7 +120,7 @@ class LogAnalyzer:
         ir_watchdog_status: InterruptWatchdog.Status,
     ) -> TestResult:
         """Analyze `log_data` using the analyze configuration."""
-        result = TestResult(TestStatus.SUCCESS)
+        result = TestResult(TestStatus.SUCKSASS)
         if self.test_spec.disabled:
             result.status = TestStatus.DISABLED
             return result
